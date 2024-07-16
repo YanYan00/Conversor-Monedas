@@ -4,21 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor de monedas</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/imgs/favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <h2>Conversor de monedas Nacional</h2>
     <div id="contenedor">
         <div class="info">
             <h3>Pesos CLP</h3>
-            <input type="text">    
+            <input type="text" value="0" id="cantidad">    
         </div>
         <div class="info">
             <h4>Moneda a convertir</h4>
-            <select name="monedas" id="monedas"></select>
+            <select name="moneda" id="moneda">
+                <option value="dolar">Dolar</option>
+                <option value="euro">Euro</option>
+                <option value="uf">Uf</option>
+                <option value="bitcoin">Bitcoin</option>
+            </select>
         </div>
-        <button>Calcular</button>
-        <p>Resultado:</p>
+        <button onclick="conversorMonedas()">Convertir</button>
+        <p id="resultado"></p>
     </div>
+    <canvas id="myChart"></canvas>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
